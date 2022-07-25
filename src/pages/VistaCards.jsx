@@ -23,7 +23,7 @@ const VistaCards = () => {
                     
                     <h5 className='titulo__big'>Top Mangas</h5>
                     <Grid container  spacing={2} className="personajes" justifyContent={"center"}>
-                    {dataManga?.lenght === 0 ? dataManga?.map(m=>(
+                    {dataManga?.lenght !== 0 ? dataManga?.map(m=>(
                         <Grid item xs={12} sm={4} md={2} xl={2} >
                             <Card>
                                 { m?.images?.jpg?.image_url ?  (
