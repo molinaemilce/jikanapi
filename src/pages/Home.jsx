@@ -39,11 +39,11 @@ const Home = () => {
                 {
                     dataRandom ? (
                         <>
-                            <img src={dataRandom?.trailer?.images?.maximum_image_url && (dataRandom?.trailer?.images?.maximum_image_url !== "https://img.youtube.com/vi/eWnTeKEsDlU/maxresdefault.jpg") ? dataRandom?.trailer?.images?.maximum_image_url :  sinportada } alt="portada" className='portada__imagen' />
+                            <img src={sinportada } alt="portada" className='portada__imagen' />
                             <Container className='portada__titulo'>
                                 <h2>{dataRandom.title}</h2>
                                 <p className='portada__p '>
-                                    <span>
+                                    <span className='puntos-suspensivos'>
                                         {dataRandom.synopsis ||  "No description"}... 
                                     </span>
                                     <span style={{display:"flex"}}>

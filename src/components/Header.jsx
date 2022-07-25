@@ -126,10 +126,10 @@ const Header = () => {
                         </Typography>
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                             <Link
-                                to="/s"
+                                to="/"
                                 key=""
                                 onClick={handleCloseNavMenu}
-                                style={{ my: 2, color: 'white', display: 'block', paddingLeft: "10px" }}
+                                style={{ my: 2, color: 'white', display: 'block', paddingRight: "10px" }}
                             >
                                 Home
                             </Link>
