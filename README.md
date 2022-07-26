@@ -7,7 +7,9 @@ y tambien está adaptado a dispostitvos mobiles. <br>
 Para armar el frontend se utilizó Material UI, y css. <br>
 Para hacer la manipulacion de de datos de la api utilicé Axios, y reducer. <br>
 
-Deploy: https://iridescent-monstera-21bbac.netlify.app/detail/42282
+Deploy: https://iridescent-monstera-21bbac.netlify.app/
+<br>
+Integrantes: Emilce molina
 
 
 
