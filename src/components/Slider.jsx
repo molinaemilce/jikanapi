@@ -62,8 +62,8 @@ const Slider = ({data, typeNumber = false,subtitule=""}) => {
                     
                     typeNumber ? (
                         data?.map((d,i)=>{
-                            return <SwiperSlide className="bg-negro ">
-                                <Link to={`/detail/${d.mal_id}`} className="swipper_link color-text">
+                            return <SwiperSlide className="bg-negro " style={{padding:"8px 0px"}}>
+                                <Link to={`/detail/${d.mal_id}`} className="swipper_link color-text altura-completa">
                                     <Grid item xs={12} sm={4} md={2} xl={2} className={typeNumber ? "bg-negro slider__items slider__number" : "bg-negro slider__items"} >
 
                                         <span className={i + 1 == 10 ? "slider__numberdiez" : ""}>{i + 1}</span>
@@ -77,10 +77,11 @@ const Slider = ({data, typeNumber = false,subtitule=""}) => {
                        
                     ) : (
                             data.map(d => {
-                                    return <SwiperSlide className="bg-negro shadow-box">
-                                         <Link to={`/detail/${d?.entry?.mal_id ? d?.entry?.mal_id:  d?.mal_id }`} className="color-text" style={{width:"100%"}}>
+                                    return <SwiperSlide className="bg-negro " style={{padding:"8px 0px"}}>
+                                         <Link to={`/detail/${d?.entry?.mal_id ? d?.entry?.mal_id:  d?.mal_id }`} className="color-text altura-completa shadow-box" style={{width:"100%"}}>
                                         <Grid item xs={12} sm={4} md={2} xl={2} className={typeNumber ? "bg-negro slider__items slider__number" : "bg-negro slider__items"} >
                                           <img src={d?.entry?.images?.jpg.image_url || d?.images?.jpg?.image_url} className="slider__imagen" />
+                                          <span className="texto-blanco swipper_titulo puntos-suspensivos">{d?.entry?.title || d?.title}</span>
                                         </Grid>
                                         </Link> | {" "}
                                     </SwiperSlide>

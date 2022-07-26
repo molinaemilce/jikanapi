@@ -7,6 +7,12 @@
     font-family: 'Roboto', sans-serif;
     ;
 }
+.texto-blanco{
+    color: white;
+}
+.altura-completa{
+    height: 100%;
+}
 a{
     text-decoration: none;
 }
@@ -141,6 +147,7 @@ body{
     display: block;
     width: 100%;
     height: 100%;
+    border-radius: 8px;
     object-fit: cover;
 }
 
@@ -192,6 +199,8 @@ body{
 .slider__items {
     height: 100%;
     width: 100%;
+    border-radius: 10px;
+    position: relative;
 }
 
 
@@ -223,6 +232,17 @@ body{
 }
 .slider__numberdiez{
     letter-spacing: -31px;
+}
+.swipper_titulo{
+    position: absolute;
+    top: 75%;
+    left: 3%;
+    color: white;
+    font-weight: bold;
+    background: #bb880e87;
+    border-radius: 5px;
+    padding-left: 5px;
+    width: 90%;
 }
 /* .slider__number img:last-child{
     width: 58%;
@@ -256,8 +276,9 @@ body{
 }
 .shadow-box:hover{
     box-shadow: 0 -4px 10px rgb(166 160 18);
-
+    border-radius: 10px;
     transform: scale(1.009) perspective(0px);
+    background-color: rgb(166 160 18);
 }
 .css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root{
     display: flex ;
@@ -467,6 +488,14 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,111,1) 35%, rgb
 @media(max-width:425px) {
     .slider__items{
         width: 80%;
+        margin: auto !important;
+    }
+
+    .portada__titulo {
+        top: 30%;
+    }
+    .slider__number img {
+        width: 55%;
     }
 }
 
@@ -495,5 +524,8 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,111,1) 35%, rgb
     }
     .footer__container{
         flex-direction: column;
+    }
+    .slider__number img {
+        left: 85px !important;
     }
 }

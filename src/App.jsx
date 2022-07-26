@@ -8,8 +8,8 @@ import Footer from './components/Footer';
 
 const App = () => {
   const [dataTop,dataRandom,dataPopular,dataAllAnime,dataManga,dataGeneros, dataRecom,loading,error] = useGet();
-  const accion = dataAllAnime?.filter(d => d.genres[0].name == "Action")
-  const comedy = dataAllAnime?.filter(d => d.genres[0].name == "Comedy")
+  const accion = dataAllAnime?.filter(d => d?.genres[0]?.name == "Action")
+  const comedy = dataAllAnime?.filter(d => d?.genres[0]?.name == "Comedy")
 
 
     console.log("APPrandoooomm",dataRandom)

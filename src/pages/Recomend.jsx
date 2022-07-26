@@ -10,18 +10,18 @@ import HideImageIcon from '@mui/icons-material/HideImage';
 const Categories = () => {
     const { dataRecom,loading} = useContext(AnimesContext)
     console.log("data recomennnn",dataRecom)
-    
+
     useEffect(()=>{
 
     },[dataRecom])
     return (
         <Container maxWidth="xl" sx={{ paddingTop: "60px"}}>
-            { !dataRecom ? (
+            { loading ? (
                   <div className='loading_container'>
                   <div className="lds-dual-ring"></div>
                   <span className='loading_container__texto'>Loading...</span>
               </div>
-            ): (
+            ) : (
                 <>
                  <h5 className='titulo__big'>Recommendations</h5>
                     <Grid container spacing={2} className="personajes" justifyContent={"center"}>
