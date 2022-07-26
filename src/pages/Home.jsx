@@ -22,6 +22,10 @@ const Home = () => {
     },[loading]);
 
     console.log("randoooomm",dataRandom)
+    console.log("toop", dataTop)
+    console.log("populaaaar",dataPopular)
+    console.log("accion",accion)
+    console.log("rcomedy", comedy)
     return (
 
         <div style={{ backgroundColor: "black" }}>

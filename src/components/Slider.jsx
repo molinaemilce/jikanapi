@@ -78,7 +78,7 @@ const Slider = ({data, typeNumber = false,subtitule=""}) => {
                     ) : (
                             data.map(d => {
                                     return <SwiperSlide className="bg-negro shadow-box">
-                                         <Link to={`/detail/${d?.entry?.mal_id ? d?.mal_id : 1}`} className="color-text" style={{width:"100%"}}>
+                                         <Link to={`/detail/${d?.entry?.mal_id ? d?.entry?.mal_id:  d?.mal_id }`} className="color-text" style={{width:"100%"}}>
                                         <Grid item xs={12} sm={4} md={2} xl={2} className={typeNumber ? "bg-negro slider__items slider__number" : "bg-negro slider__items"} >
                                           <img src={d?.entry?.images?.jpg.image_url || d?.images?.jpg?.image_url} className="slider__imagen" />
                                         </Grid>

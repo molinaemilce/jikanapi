@@ -10,6 +10,10 @@ import HideImageIcon from '@mui/icons-material/HideImage';
 const Categories = () => {
     const { dataRecom,loading} = useContext(AnimesContext)
     console.log("data recomennnn",dataRecom)
+    
+    useEffect(()=>{
+
+    },[dataRecom])
     return (
         <Container maxWidth="xl" sx={{ paddingTop: "60px"}}>
             { !dataRecom ? (
@@ -22,7 +26,7 @@ const Categories = () => {
                  <h5 className='titulo__big'>Recommendations</h5>
                     <Grid container spacing={2} className="personajes" justifyContent={"center"}>
                 {
-                    dataRecom && dataRecom?.map(t=> (
+                    dataRecom.length !== 0 ? dataRecom?.map(t=> (
                         <Grid item xs={12} sm={4} md={2} xl={2}>
                           
                                 <Card>
@@ -41,7 +45,11 @@ const Categories = () => {
                                 </Card>
                          
                         </Grid>
-                    ))
+                    )) : (
+                        <div className='notfound' style={{height:"500px", display:"flex",alignItems:"center",justifyContent:"center",}}>
+                            There was a mistake, try later...
+                      </div>
+                    )
                 }
 
             </Grid>
