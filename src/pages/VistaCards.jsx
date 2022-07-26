@@ -4,13 +4,16 @@ import React,{useContext} from 'react'
 import { useParams } from 'react-router-dom';
 import AnimesContext from '../AnimesContext';
 import HideImageIcon from '@mui/icons-material/HideImage';
+import { useEffect } from 'react';
 
 const VistaCards = () => {
 
     const {dataManga,loading} = useContext(AnimesContext);
-    console.log("data mangaa",dataManga)
-    console.log("##loadinggg",loading)
+    console.log("Vista manga:",dataManga)
+    console.log("##loading",loading)
+    useEffect(()=>{
 
+    },[dataManga,loading])
     return (
     <Container  maxWidth="xl" sx={{paddingTop:"60px"}}>
         {

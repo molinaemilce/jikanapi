@@ -61,6 +61,8 @@ body{
     width: 100%;
     min-height: 200px;
     height: 100vh;
+    margin-bottom: 20px;
+
 }
 
 .portada__titulo {
@@ -149,6 +151,7 @@ body{
     height: 100%;
     border-radius: 8px;
     object-fit: cover;
+    object-position: top;
 }
 
 .swiper {

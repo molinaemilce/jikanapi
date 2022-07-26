@@ -91,13 +91,13 @@ export const useGet = () => {
     const getApiRecom= async () => {
         try{
             const {data} = await apiRecom.get()
-            setDataRecom(data.data.slice(0,15))
+            setDataRecom(data?.data.slice(0,15))
     
             setTimeout(() => {
                 setLoading(false)
             }, 2000);
         }  catch (error) {
-        setError(true)
+        setError(error)
         }
     }
     useEffect(()=>{

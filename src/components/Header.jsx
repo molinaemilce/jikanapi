@@ -40,25 +40,27 @@ const Header = () => {
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
                         <AnimationIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+                        <Link to="/">
+                            <Typography
 
-                        <Typography
+                                variant="h6"
+                                noWrap
+                                component="a"
 
-                            variant="h6"
-                            noWrap
-                            component="a"
-                            href="/"
-                            sx={{
-                                mr: 2,
-                                display: { xs: 'none', md: 'flex' },
-                                fontFamily: 'monospace',
-                                fontWeight: 700,
-                                letterSpacing: '.3rem',
-                                textDecoration: 'none',
-                            }}
-                            className="color-text"
-                        >
-                            JIKANAPIs
-                        </Typography>
+                                sx={{
+                                    mr: 2,
+                                    display: { xs: 'none', md: 'flex' },
+                                    fontFamily: 'monospace',
+                                    fontWeight: 700,
+                                    letterSpacing: '.3rem',
+                                    textDecoration: 'none',
+                                }}
+                                className="color-text"
+                            >
+                                JIKANAPIs
+                            </Typography>
+
+                        </Link>
 
                         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                             <IconButton
@@ -91,7 +93,7 @@ const Header = () => {
                             >
                                 <MenuItem key="topMangas" onClick={handleCloseNavMenu} className="menu-item">
                                     <Link to="/">
-                                        Home    
+                                        Home
                                     </Link>
                                     <Link to="/topmangas">
                                         Top Mangas
@@ -104,26 +106,28 @@ const Header = () => {
                             </Menu>
                         </Box>
                         <AnimationIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+                        <Link to="/">
+                            <Typography
+                                variant="h5"
+                                noWrap
+                                component="a"
+                                sx={{
+                                    mr: 2,
+                                    display: { xs: 'flex', md: 'none' },
+                                    flexGrow: 1,
+                                    fontFamily: 'monospace',
+                                    fontWeight: 700,
+                                    letterSpacing: '.3rem',
+                                    textDecoration: 'none',
+                                }}
+                                className="color-text"
+                                href="/"
+                            >
 
-                        <Typography
-                            variant="h5"
-                            noWrap
-                            component="a"
-                            sx={{
-                                mr: 2,
-                                display: { xs: 'flex', md: 'none' },
-                                flexGrow: 1,
-                                fontFamily: 'monospace',
-                                fontWeight: 700,
-                                letterSpacing: '.3rem',
-                                textDecoration: 'none',
-                            }}
-                            className="color-text"
-                            href="/"
-                        >
+                                JIKANAPI
+                            </Typography>
+                        </Link>
 
-                            JIKANAPI
-                        </Typography>
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                             <Link
                                 to="/"

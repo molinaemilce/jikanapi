@@ -9,7 +9,7 @@ import HideImageIcon from '@mui/icons-material/HideImage';
 
 const Categories = () => {
     const { dataRecom,loading} = useContext(AnimesContext)
-    console.log("data recomennnn",dataRecom)
+    console.log("vista recomendacion:",dataRecom)
 
     useEffect(()=>{
 

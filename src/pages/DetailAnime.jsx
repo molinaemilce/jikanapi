@@ -6,16 +6,21 @@ import { Grid } from 'swiper';
 import { useGetDetail } from '../hooks/useGetDetail';
 import HideImageIcon from '@mui/icons-material/HideImage';
 import portadaDetail from '../assets/images/portadadetail.jpg';
+import { useEffect } from 'react';
+import Loading from '../components/Loading';
 const DetailAnime = () => {
   const { id } = useParams();
   const [dataDetailID, dataDetailPersonaje] = useGetDetail(id)
 
-  console.log("personjee",dataDetailPersonaje)
+  console.log("vista personajes:",dataDetailPersonaje)
 
+  useEffect(()=>{
+
+  },[dataDetailID,dataDetailPersonaje])
   return (
     <>
       {
-        dataDetailID && dataDetailPersonaje ? (
+        (dataDetailID?.length !== 0 || dataDetailPersonaje?.length !== 0) ? (
           <>
             <div className='detail' style={{backgroundImage:`url(${portadaDetail})`}}>
               <Container maxWidth="xl" className='detail__contenido' >
@@ -60,9 +65,7 @@ const DetailAnime = () => {
                       </CardContent>
                     </Card>
                   </Gridm>
-                ))  : <div className='notfound'>
-                  no characters found
-                  </div>}
+                ))  : <Loading/>}
               </Gridm>
             </Container>
           </>

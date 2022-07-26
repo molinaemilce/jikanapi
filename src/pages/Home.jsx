@@ -20,6 +20,9 @@ const Home = () => {
             setLoading(false)
         },[1000])        
     },[loading]);
+    useEffect(()=>{
+            
+    },[dataTop,dataRandom,dataPopular,accion,comedy]);
 
     console.log("randoooomm",dataRandom)
     console.log("toop", dataTop)
