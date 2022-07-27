@@ -19,7 +19,7 @@ export const useGet = () => {
             const {data} = await apiAnimeTop.get()
             
             
-            setDataTop(data.data.slice(0,10))
+            setDataTop(data?.data.slice(0,10))
           
             setTimeout(() => {
                 setLoading(false)
@@ -31,7 +31,7 @@ export const useGet = () => {
     const getApiRandom = async () => {
         try{
             const {data} = await apiRandom.get()
-            setDataRandom(data.data)
+            setDataRandom(data?.data)
     
             setTimeout(() => {
                 setLoading(false)
@@ -43,7 +43,7 @@ export const useGet = () => {
     const getApiPopular = async () => {
         try{
             const {data} = await apiPopular.get()
-            setDataPopular(data.data)
+            setDataPopular(data?.data)
     
             setTimeout(() => {
                 setLoading(false)
@@ -55,7 +55,7 @@ export const useGet = () => {
     const getApiAllAnime= async () => {
         try{
             const {data} = await apiAllAnime.get()
-            setDataAllAnime(data.data)
+            setDataAllAnime(data?.data)
     
             setTimeout(() => {
                 setLoading(false)
@@ -67,7 +67,7 @@ export const useGet = () => {
     const getApiTopManga= async () => {
         try{
             const {data} = await apiTopManga.get()
-            setDataManga(data.data.slice(0,10))
+            setDataManga(data?.data.slice(0,10))
     
             setTimeout(() => {
                 setLoading(false)
@@ -79,7 +79,7 @@ export const useGet = () => {
     const getApiGeneros= async () => {
         try{
             const {data} = await apiGeneros.get()
-            setDataGeneros(data.data.slice(0,20))
+            setDataGeneros(data?.data.slice(0,20))
     
             setTimeout(() => {
                 setLoading(false)

@@ -13,14 +13,14 @@ const DetailAnime = () => {
   const [dataDetailID, dataDetailPersonaje] = useGetDetail(id)
 
   console.log("vista personajes:",dataDetailPersonaje)
-
+  console.log("data anime:",dataDetailID)
   useEffect(()=>{
 
   },[dataDetailID,dataDetailPersonaje])
   return (
     <>
       {
-        (dataDetailID?.length !== 0 || dataDetailPersonaje?.length !== 0) ? (
+        (dataDetailID?.length !== 0 && dataDetailPersonaje?.length !== 0) ? (
           <>
             <div className='detail' style={{backgroundImage:`url(${portadaDetail})`}}>
               <Container maxWidth="xl" className='detail__contenido' >

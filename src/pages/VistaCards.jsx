@@ -1,10 +1,9 @@
 import { Card, CardContent, Container, Grid } from '@mui/material';
 import { textAlign } from '@mui/system';
-import React,{useContext} from 'react'
+import React,{useContext,useEffect} from 'react'
 import { useParams } from 'react-router-dom';
 import AnimesContext from '../AnimesContext';
 import HideImageIcon from '@mui/icons-material/HideImage';
-import { useEffect } from 'react';
 
 const VistaCards = () => {
 
